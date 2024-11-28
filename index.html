@@ -21,6 +21,9 @@
     <link rel="stylesheet" type="text/css" href="static/css/icofont.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 	<link rel="stylesheet" id="theme-change" type="text/css" href="">
+
+	<link rel="stylesheet" href="static/css/calender.css">
+    <link rel="stylesheet" type="text/css" href="static/css/theme.css">
 </head>
 
 <body>
@@ -52,6 +55,7 @@
                                 <span></span>
                             </a>
                         </div>
+                        <h4 id="badsoup">loading...</h4>
                     </div>
                     <div class="header-controls">
                         <div class="user-info-wrapper header-links">
@@ -211,8 +215,15 @@
                 </div>
                 <!-- <iframe height="500" src="assignment.html"></iframe> -->
 
-                <div class="title">
-                    <h2>美好的一天从清晨开始</h2>
+                <!-- Products view Start -->
+				<div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card table-card">
+                            <div class="card-body">
+                                <div class="calendar-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="ad-footer-btm">
@@ -233,6 +244,38 @@
     <script src="static/js/nice-select.min.js"></script>
     <!-- Custom Script -->
     <script src="static/js/custom.js"></script>
+
+    <script src="static/js/calendar.min.js"></script>
+	<script>
+		function selectDate(date) {
+		  $('.calendar-wrapper').updateCalendarOptions({
+			date: date
+		  });
+		}
+
+		var defaultConfig = {
+		  weekDayLength: 1,
+		  date: new Date(),
+		  onClickDate: selectDate,
+		  showYearDropdown: true,
+		  startOnMonday: true,
+		};
+
+		$('.calendar-wrapper').calendar(defaultConfig);
+	</script>
+
+    <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'https://www.7ed.net/soup/api');
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        var data = JSON.parse(xhr.responseText);
+        var badsoup = document.getElementById('badsoup');
+        badsoup.innerText = data.badsoup;
+      }
+    }
+    xhr.send();
+    </script>
 </body>
 
 </html>

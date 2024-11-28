@@ -191,7 +191,7 @@
                                                         <label class="mb-0 badge badge-primary" title="" data-original-title="Pending">已完成</label>
                                                     </td>
                                                     <td>
-                                                        <button class="mb-0 badge badge-primary" title="" data-original-title="Pending">进入</button>
+                                                        <button class="mb-0 badge badge-primary" title="" data-toggle="modal" data-target="#composemodal">进入</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -209,7 +209,7 @@
                                                         <label class="mb-0 badge badge-success" title="" data-original-title="Pending">已评分</label>
                                                     </td>
                                                     <td>
-                                                        <button class="mb-0 badge badge-primary" title="" data-original-title="Pending">进入</button>
+                                                        <button class="mb-0 badge badge-primary" title="" data-toggle="modal" data-target="#composemodal">进入</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -227,7 +227,7 @@
                                                         <label class="mb-0 badge badge-danger" title="" data-original-title="Pending">未完成</label>
                                                     </td>
                                                     <td>
-                                                        <button class="mb-0 badge badge-primary" title="" data-original-title="Pending">进入</button>
+                                                        <button class="mb-0 badge badge-primary" title="" data-toggle="modal" data-target="#composemodal">进入</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -245,7 +245,7 @@
                                                         <label class="mb-0 badge badge-primary" title="" data-original-title="Pending">已完成</label>
                                                     </td>
                                                     <td>
-                                                        <button class="mb-0 badge badge-primary" title="" data-original-title="Pending">进入</button>
+                                                        <button class="mb-0 badge badge-primary" title="" data-toggle="modal" data-target="#composemodal">进入</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -264,6 +264,41 @@
         </div>
 	</div>    
     <!-- Slide Setting Box -->
+
+    <!-- Model -->
+    <div class="modal fade" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composemodalTitle">详情</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3">
+                            <h5>作业ID</h5>
+                            <p>#785ef1</p>
+                        </div>
+                        <div class="mb-3">
+                            <h5>作业详情</h5>
+                            <p>需要完成一个实验并打包</p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="file" name="file" id="file" accept="zip/*"/>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Model -->
 
     <!-- Color Setting -->
     <!-- Color Setting -->
