@@ -269,32 +269,36 @@
     <div class="modal fade" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-modal="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="composemodalTitle">详情</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <div class="mb-3">
-                            <h5>作业ID</h5>
-                            <p>#785ef1</p>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="composemodalTitle">详情</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="mb-3">
+                                <h5>作业ID</h5>
+                                <p>#785ef1</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>作业详情</h5>
+                                <p>需要完成一个实验并打包</p>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <h5>作业详情</h5>
-                            <p>需要完成一个实验并打包</p>
+                        <div class="form-block">
+                            <h5>提交作业</h5>
+                            <textarea placeholder="写点什么..." class="form_field"></textarea>
+                            <input type="file" name="file" id="file" accept="zip/*"/>
+                            <!-- <button type="submit">上传</button> -->
                         </div>
                     </div>
-                    <div>
-                        <input type="file" name="file" id="file" accept="zip/*"/>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">提交</button>
                     </div>
-                </div>
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">提交</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -350,10 +350,15 @@
 						</div>
 					</div>
 				</div>
-				
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">退选</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal">选中</button>
+					<form action="" method="post" enctype="multipart/form-data">
+						<input type="hidden" name="course_id" value="select">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">退选</button>
+					</form>
+					<form action="" method="post" enctype="multipart/form-data">
+						<input type="hidden" name="course_id" value="withdraw">
+						<button type="submit" class="btn btn-primary" data-dismiss="modal">选中</button>
+					</form>
 				</div>
 			</div>
 		</div>
